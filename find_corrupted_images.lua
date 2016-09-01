@@ -27,5 +27,6 @@ end
 
 os.execute('rm -f imgpath.tmp')
 
+print('\n')
 print(('Found %d wrong images'):format(count))
 print('Done.')
