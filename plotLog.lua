@@ -1,11 +1,13 @@
 -- plot which column ? pass the #column as cmdline args
+-- Example -- plot the second column of file train.log
+-- $ th plotLog.lua train.log 2
 -- Jie Lei
+-- github@jayleicn
 
 require 'gnuplot'
 
 
 -- Read data from file
-
 function read_file_str(path)
     local f = assert(io.open(path, "r"))
     local c = f:read "*a"
