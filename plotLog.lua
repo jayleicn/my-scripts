@@ -31,6 +31,7 @@ column = torch.Tensor(column)
 -- Start plotting
 gnuplot.figure(1)
 gnuplot.plot(column, '-')
+gnuplot.axis({'', '', 0, ''})  -- set the min-y as 0
 gnuplot.xlabel('#epoch')
 gnuplot.ylabel(string.split(logTable[1], '\t')[tonumber(arg[2])])
 
