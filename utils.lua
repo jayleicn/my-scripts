@@ -8,6 +8,18 @@ function readJson(file)
 end
 
 
+--save simple lua table in plain text
+function saveTable(filename,Obj)
+   fd = io.open(filename, 'w')
+   fd:write("{\n")
+   for k,v in pairs(Obj) do
+    fd:write("  ", tostring(k), " = ", tostring(v))
+    fd:write(",\n")
+   end
+   fd:write("}\n")
+   fd:close()
+end
+
 
 -- calculate table lengh in lua
 function tablelength(T)
