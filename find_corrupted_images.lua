@@ -18,7 +18,8 @@ local total = 0
 for line in io.lines('imgpath.tmp') do
    local ok, img = pcall(image.load, line)
    if not ok then
-      print('\n error: ' .. line .. '\n')
+      --print('rm -f ' .. line .. '\n')
+      os.execute('echo "'..line'" >> error.sh')
       count = count + 1
    end
    total  = total + 1
